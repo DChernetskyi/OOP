@@ -29,14 +29,15 @@ namespace @class
         static void Main(string[] args)
         {
             Car Audi = new Car();
+            Car Motor = new Car();
             Audi.start = 5;
             Audi.colour = "black";
             Audi.name = "A8";
             Audi.wheel = "R19";
             Audi.door = 4;
-            Audi.type = "diesel";
-            Audi.kW = 175;
-            Audi.Motor();
+            Motor.type = "diesel";
+            Motor.kW = 175;
+            Motor.Motor();
             Audi.Info();
 
             Console.ReadLine();
