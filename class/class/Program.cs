@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace @class
 {
+    class Motor
+    {
+        public string type;
+        public int kW;
+        public void Drive()
+        {
+            Console.WriteLine($"тип: {type}  кВт: {kW}");
+        }
+    }
     class Car
     {
         public string name;
         public string colour;
         public int start;
-        public string type;
-        public int kW;
-        public void Motor()
-        {
-            Console.WriteLine($"тип: {type}  кВт: {kW}");
-        }
+        
         public string wheel;
         public int door;
         public void Info()
@@ -29,15 +33,15 @@ namespace @class
         static void Main(string[] args)
         {
             Car Audi = new Car();
-            Car Motor = new Car();
+            Motor motor = new Motor();
             Audi.start = 5;
             Audi.colour = "black";
             Audi.name = "A8";
             Audi.wheel = "R19";
             Audi.door = 4;
-            Motor.type = "diesel";
-            Motor.kW = 175;
-            Motor.Motor();
+            motor.type = "diesel";
+            motor.kW = 175;
+            motor.Drive();
             Audi.Info();
 
             Console.ReadLine();
