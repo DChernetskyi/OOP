@@ -11,9 +11,12 @@ namespace @class
         public string name;
         public string colour;
         public int start;
+        public string motor;
+        public string wheel;
+        public int door;
         public void Info()
         {
-            Console.WriteLine($"модель: {name}  цвет: {colour}  количество стартов: {start}");
+            Console.WriteLine($"модель: {name}  цвет: {colour}  количество стартов: {start} \n двигатель: {motor}  колесо: {wheel}  дверей: {door}");
         }
     }
     class Program
@@ -24,6 +27,9 @@ namespace @class
             Audi.start = 5;
             Audi.colour = "black";
             Audi.name = "A8";
+            Audi.motor = "diesel";
+            Audi.wheel = "R19";
+            Audi.door = 4;
             Audi.Info();
 
             Console.ReadLine();
